@@ -19,14 +19,14 @@ import io.flutter.plugin.common.PluginRegistry.Registrar
 import java.io.File
 
 
-/** SocialSharePlugin */
-class SocialSharePlugin(private val registrar: Registrar):  MethodCallHandler {
+/** SocialShare */
+class SocialShare(private val registrar: Registrar):  MethodCallHandler {
 
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
       val channel = MethodChannel(registrar.messenger(), "social_share")
-      channel.setMethodCallHandler(SocialSharePlugin(registrar))
+      channel.setMethodCallHandler(SocialShare(registrar))
     }
   }
   @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
